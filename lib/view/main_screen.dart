@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:podcast/colors.dart';
 import 'package:podcast/controller/main_screen_controller.dart';
+import 'package:podcast/view/home_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -21,6 +23,7 @@ class _MainScreenState extends State<MainScreen> {
             Container(
               width: mainScreenController.size.width,
               height: mainScreenController.size.height,
+              child: HomeScreen(),
             ),
             Positioned(
               left: 10,
@@ -31,16 +34,37 @@ class _MainScreenState extends State<MainScreen> {
                 height: 60,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
-                  color: Colors.red,
+                  color: Get.isDarkMode
+                      ? SolidColors.colorDarkBottomNavigation
+                      : SolidColors.colorLightBottomNavigation,
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     IconButton(
                       onPressed: () {},
                       icon: const Icon(
                         CupertinoIcons.home,
                       ),
-                    )
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        CupertinoIcons.add_circled,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        CupertinoIcons.heart,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        CupertinoIcons.profile_circled,
+                      ),
+                    ),
                   ],
                 ),
               ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:podcast/languages.dart';
+import 'package:podcast/theme.dart';
+import 'package:podcast/view/home_screen.dart';
 import 'package:podcast/view/main_screen.dart';
 
 void main() {
@@ -18,7 +20,9 @@ class MyApp extends StatelessWidget {
       translations: Languages(),
       locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),
-      home: const MainScreen(),
+      theme: Themes.lightTheme,
+      darkTheme: Themes.darkTheme,
+      home: MainScreen(),
     );
   }
 }
