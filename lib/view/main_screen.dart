@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:podcast/colors.dart';
+import 'package:podcast/consts/app_colors.dart';
 import 'package:podcast/controller/main_screen_controller.dart';
 import 'package:podcast/view/home_screen.dart';
 
@@ -34,9 +34,9 @@ class _MainScreenState extends State<MainScreen> {
                 height: 60,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
-                  color: Get.isDarkMode
-                      ? SolidColors.colorDarkBottomNavigation
-                      : SolidColors.colorLightBottomNavigation,
+                  color: mainScreenController.darkMood
+                      ? AppColors.colorDarkBottomNavigation
+                      : AppColors.colorLightBottomNavigation,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,

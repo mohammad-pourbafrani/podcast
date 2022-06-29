@@ -4,11 +4,11 @@ class Languages extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'en_US': {
-          'txt_hello': 'hello',
+          'search': 'search Podcast ...',
           'txt_by': 'good by',
         },
         'fa_IR': {
-          'txt_hello': 'سلام',
+          'search': 'جستوجوی پادکست ...',
           'txt_by': 'خداحافظ',
         }
       };
